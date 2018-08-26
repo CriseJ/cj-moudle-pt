@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fram_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#C8C8C8"
+        />
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:background="#F9F9F9"
+        >
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="@string/one_name"
+            />
+        <RadioButton
+            android:id="@+id/rb_invest"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="@string/two_name"
+            />
+        <RadioButton
+            android:id="@+id/rb_shop"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="@string/three_name"
+            />
+        <RadioButton
+            android:id="@+id/rb_more"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="@string/four_name"
+            />
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_user"-->
+            <!--style="@style/main_tab_bottom"-->
+            <!--android:drawableTop="@drawable/icon_user"-->
+            <!--android:text="@string/user_name"-->
+            <!--/>-->
+    </RadioGroup>
+
+
+
+
+
+
+
+
+</LinearLayout>
