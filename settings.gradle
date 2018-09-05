@@ -1,1 +1,1 @@
-include ':app', ':one-moudle', ':two-moudle', ':three-moudle', ':four-moudle', ':base-library'
+include ':app', ':one-moudle', ':two-moudle', ':three-moudle', ':four-moudle', ':base-library', ':login-regist-moudle'
