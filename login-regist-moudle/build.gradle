@@ -1,15 +1,14 @@
-if (isMoudle.toBoolean()){
+if (isMoudle.toBoolean()) {
     apply plugin: 'com.android.application'
-}else {
+} else {
     apply plugin: 'com.android.library'
 }
 android {
     compileSdkVersion 27
     //解决各个组件之间资源名冲突的问题
     resourcePrefix 'loginandregistmoudle'
-
     defaultConfig {
-        if (isMoudle.toBoolean()){
+        if (isMoudle.toBoolean()) {
             applicationId "cj_pt.crise.com.login_regist_moudle"
         }
         minSdkVersion 16
@@ -19,38 +18,35 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     // 解决AndroidManifest.xml在Debug和Release模式下的使用问题，其中isModle值的添加和修改是在项目的gradle.properties文件中
-    sourceSets{
-        main{
-            if (isMoudle.toBoolean()){
+    sourceSets {
+        main {
+            if (isMoudle.toBoolean()) {
                 manifest.srcFile 'src/main/moudle/AndroidManifest.xml'
-            }else {
+            } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 //集成开发模式下排除debug文件夹中的所有Java文件
-                java{
+                java {
                     exclude 'debug/**'
                 }
             }
         }
     }
-
     //  因为我把拦截器等公用类在base注册，在编译期间生成路径映射。同时也需要在build中加入
-    defaultConfig{
-        javaCompileOptions{
-            annotationProcessorOptions{
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
                 arguments = [moudleName: project.getName()]
             }
         }
     }
-
+    buildToolsVersion '28.0.0 rc1'
 }
 
 dependencies {

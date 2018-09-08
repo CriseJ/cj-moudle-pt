@@ -20,7 +20,6 @@ public class SplashActivity extends MVPBaseActivity<SplashViewInterface, SplashP
         mPresenter.putParams();
     }
 
-
     @Override
     public void showData(String data) {
 
